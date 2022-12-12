@@ -1,0 +1,38 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/todos/home/home",
+        "pages/todos/detail/detail",
+        "pages/todos/nav/nav",
+        "pages/todos/process/process",
+        "pages/todos/confirm/confirm",
+        "pages/todos/complete/complete",
+        "pages/done/home/home",
+        "pages/my/home/home",
+        "pages/my/account/account",
+        "pages/my/about/about",
+        "pages/my/auth/auth",
+        "pages/done/privicy/privicy"
+    ],
+    "window": {
+        "navigationStyle": "custom"
+    },
+    "usingComponents": {
+        "cu-custom": "/colorui/components/cu-custom"
+    },
+    "requiredBackgroundModes": [
+        "location"
+    ],
+    "requiredPrivateInfos": [
+        "getLocation",
+        "chooseAddress",
+        "choosePoi"
+    ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于定位使用"
+        }
+    },
+    "debug": true,
+    "sitemapLocation": "sitemap.json"
+}

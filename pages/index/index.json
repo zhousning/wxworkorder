@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "todos": "/pages/todos/home/home",
+    "done": "/pages/done/home/home",
+    "my": "/pages/my/home/home"
+  }
+}
