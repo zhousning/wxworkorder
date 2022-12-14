@@ -1,4 +1,4 @@
-// pages/todos/process/process.js
+const syinit = require('../../../libs/syinit');
 const app = getApp()
 
 Component({
@@ -8,5 +8,11 @@ Component({
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar
-  }
+    },
+    lifetimes: {
+        attached: function () {
+            let that = this;
+            syinit.task_query_finish(that);
+        },
+    }
 })

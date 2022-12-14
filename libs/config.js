@@ -38,15 +38,17 @@ var configs = {
     identity: 'http://192.168.100.108:3000/wx_users/identity',
     set_fct: 'http://192.168.100.108:3000/wx_users/set_fct',
     img_upload: 'http://192.168.100.108:3000/wx_resources/img_upload',
-    task_query_all: 'http://192.168.100.108:3000/wx_tasks/query_all',
+    task_query_pend: 'http://192.168.100.108:3000/wx_tasks/query_pend',
+    task_query_info: 'http://192.168.100.108:3000/wx_tasks/query_info',
+    task_query_rate: 'http://192.168.100.108:3000/wx_tasks/query_rate',
+    task_query_record: 'http://192.168.100.108:3000/wx_tasks/query_record',
+    task_query_process: 'http://192.168.100.108:3000/wx_tasks/query_process',
+    task_query_unconfirm: 'http://192.168.100.108:3000/wx_tasks/query_unconfirm',
     task_query_finish: 'http://192.168.100.108:3000/wx_tasks/query_finish',
+    task_query_all: 'http://192.168.100.108:3000/wx_tasks/query_all',
     task_query_plan: 'http://192.168.100.108:3000/wx_tasks/query_plan',
     task_basic_card: 'http://192.168.100.108:3000/wx_tasks/basic_card',
-    task_info: 'http://192.168.100.108:3000/wx_tasks/task_info',
-    task_start: 'http://192.168.100.108:3000/wx_task_logs/task_start',
-    task_end: 'http://192.168.100.108:3000/wx_task_logs/task_end',
     task_report_create: 'http://192.168.100.108:3000/wx_tasks/report_create',
-    task_accept_points: 'http://192.168.100.108:3000/wx_task_logs/accept_points',
     auth_process: 'http://192.168.100.108:3000/wx_auths/auth_process',
   },
   getNetwork() {
@@ -63,11 +65,6 @@ var configs = {
       })
     })
   },
-  games: {
-    rankScore: 10,
-    changeQuestionTime: 100,
-    tollGate: 60
-  }
 }
 
 module.exports = configs

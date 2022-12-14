@@ -1,5 +1,27 @@
 <scroll-view scroll-y class="scrollPage">
 
-<order-card></order-card>
-<view class='cu-tabbar-height'></view>
+    <view wx:for="{{workorders}}" wx:key="{{index}}" class="cu-card article ">
+
+        <view class="cu-item shadow padding-bottom-xs">
+            <navigator hover-class='none' url="/pages/todos/detail/detail?task_id={{item.id}}">
+                <view class="cu-bar bg-white solid-bottom margin-bottom">
+                    <view class='action'>
+                        <text class='cuIcon-titles text-orange '></text>工单：{{item.number}}
+                    </view>
+                </view>
+
+                <view class="content">
+                    <view class="desc">
+                        <view wx:for="{{item.infos}}" wx:key="{{index}}" wx:for-item="info" class="content margin-bottom-xs">{{info}}</view>
+                    </view>
+                </view>
+            </navigator>
+            <view class="flex solid-top margin-top padding-xs justify-end">
+                <view class="cu-btn line-blue padding-sm margin-xs ">接单</view>
+                <view class="cu-btn line-blue padding-sm margin-xs ">转单</view>
+            </view>
+        </view>
+    </view>
+
+    <view class='cu-tabbar-height'></view>
 </scroll-view>
