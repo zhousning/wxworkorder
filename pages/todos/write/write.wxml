@@ -1,0 +1,74 @@
+<cu-custom bgColor="bg-blue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">完成工单</view>
+</cu-custom>
+
+
+<form bindsubmit="bindFormSubmit" >
+ <view class='cu-tabbar-height bg-white'></view>
+    <!--<view class="cu-form-group justify-between padding-top-xl">
+            <view class="title">联系人 </view>
+            <input placeholder="姓名" name="username" bindinput="usernameInput" value="{{username}}" />
+        </view>
+        <view class="cu-form-group">
+            <view class="title">联系电话</view>
+            <input placeholder="手机号" name="phone" type="phone" bindinput="phoneInput" value="{{phone}}" />
+            <view class="cu-capsule radius">
+                <view class="cu-tag bg-blue">
+                    +86
+                </view>
+                <view class="cu-tag line-blue">
+                    中国大陆
+                </view>
+            </view>
+        </view>
+        <view class="cu-form-group justify-between">
+            <view class="title">身份证 </view>
+            <input placeholder="身份证" name="idno" bindinput="idnoInput" value="{{idno}}" />
+        </view> -->
+    <!-- 		<view class="cu-form-group ">
+			<view class="title">巡检任务</view>
+			<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+				<view class="picker">
+					{{picker[index]['task_date']}}
+				</view>
+			</picker>
+		</view> -->
+
+    <view class="cu-form-group">
+        <view class="title">处理结果</view>
+        <radio-group bindchange="radioChange" name="running">
+            <label class="" wx:for="{{running}}" wx:key="{{item.value}}" style="margin-right:80rpx;">
+                <radio style="margin-right:10rpx;" value="{{item.value}}" checked="{{item.checked}}" />{{item.text}}
+            </label>
+        </radio-group>
+    </view>
+
+
+    <view class="cu-form-group ">
+        <textarea maxlength="-1" bindinput="textareaAInput" placeholder="工单处理内容" value="{{question}}"></textarea>
+    </view>
+
+    <view class="cu-bar bg-white ">
+        <view class="action">
+            现场拍照
+        </view>
+    </view>
+
+    <view class="cu-form-group">
+        <view class="grid col-4 grid-square flex-sub">
+            <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+                <image src='{{imgList[index]}}' mode='aspectFill'></image>
+                <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+                    <text class="cuIcon-close"></text>
+                </view>
+            </view>
+            <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+                <text class="cuIcon-cameraadd"></text>
+            </view>
+        </view>
+    </view>
+    <view class="padding-xl">
+        <button form-type="submit" class="cu-btn bg-blue shadow-blur block margin-tb-sm lg">提交</button>
+    </view>
+</form>

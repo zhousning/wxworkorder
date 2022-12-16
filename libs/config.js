@@ -43,6 +43,7 @@ var configs = {
     task_query_rate: 'http://192.168.100.108:3000/wx_tasks/query_rate',
     task_query_record: 'http://192.168.100.108:3000/wx_tasks/query_record',
     task_query_process: 'http://192.168.100.108:3000/wx_tasks/query_process',
+    task_accept: 'http://192.168.100.108:3000/wx_tasks/accept_task',
     task_query_unconfirm: 'http://192.168.100.108:3000/wx_tasks/query_unconfirm',
     task_query_finish: 'http://192.168.100.108:3000/wx_tasks/query_finish',
     task_query_all: 'http://192.168.100.108:3000/wx_tasks/query_all',

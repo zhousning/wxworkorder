@@ -1,0 +1,5 @@
+/* pages/todos/home/home.wxss */
+.privicy-content {
+    height: 300px;
+    overflow-y: scroll;
+}
