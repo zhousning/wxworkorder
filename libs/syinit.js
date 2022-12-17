@@ -92,8 +92,15 @@ var init = {
                 taskid: taskid
             },
             success: function (res) {
+                var workorder = res.data;
+                var wimgs = workorder.imgs;
+                var imgs = [];
+                for (var i=0; i < wimgs.length; i++){
+                    imgs.push(app.globalData.config.routes.uhost + wimgs[i])
+                }
                 that.setData({
-                    workorder: res.data
+                    workorder: workorder,
+                    imgs: imgs
                 })
             }
         })

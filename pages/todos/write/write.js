@@ -152,7 +152,7 @@ Page({
                 title: '数据保存中',
             })
             wx.request({
-                url: app.globalData.config.routes.task_report_create,
+                url: app.globalData.config.routes.task_processed,
                 method: 'POST',
                 header: {
                     'Accept': "*/*",
@@ -161,7 +161,7 @@ Page({
                 data: {
                     id: openid,
                     taskid: taskid,
-                    feetback: state,
+                    feedback: state,
                     content: question,
                     imgs: imgs
                 },

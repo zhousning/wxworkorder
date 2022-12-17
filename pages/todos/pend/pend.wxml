@@ -17,10 +17,10 @@
                 </view>
             </navigator>
             <view class="flex solid-top margin-top padding-xs justify-end">
-                <navigator wx:if="{{task_finish}}" hover-class='none' url="/pages/todos/write/write?task_id={{item.id}}">
+                <navigator wx:if="{{item.task_finish}}" hover-class='none' url="/pages/todos/write/write?task_id={{item.id}}">
                     <view class="cu-btn line-blue padding-sm margin-xs ">完成工单</view>
                 </navigator>
-                <view wx:else="{{!task_finish}}" class="cu-btn line-blue padding-sm margin-xs " bindtap="accept_task" data-taskid="{{item.id}}">接单</view>
+                <view wx:else="{{!item.task_finish}}" class="cu-btn line-blue padding-sm margin-xs " bindtap="accept_task" data-taskid="{{item.id}}">接单</view>
                 <view class="cu-btn line-blue padding-sm margin-xs ">转单</view>
             </view>
         </view>

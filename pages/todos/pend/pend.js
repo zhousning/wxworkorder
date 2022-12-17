@@ -9,24 +9,17 @@ Component({
         StatusBar: app.globalData.StatusBar,
         CustomBar: app.globalData.CustomBar,
         workorders: [],
-        task_finish: true,
+        task_finish: null,
     },
     lifetimes: {
         attached: function () {
             let that = this;
-            var data = [{
-                id: 1,
-                number: 234234,
-                infos: ['报修人员：周宁', '故障原因：水表坏了']
-            }]
-            that.setData({
-                workorders: data
-            })
             syinit.task_query_pend(that);
         },
     },
     methods: {
         accept_task: function (e) {
+            var that = this;
             wx.showModal({
                 title: '温馨提示',
                 content: '接单请合理安排时间',

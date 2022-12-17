@@ -13,10 +13,10 @@
         <view class="cu-item shadow padding-xs">
             <view class="content">
                 <view class="desc">
-                    <view wx:for="{{item.infos}}" wx:key="{{index}}" wx:for-item="info" class="content margin-bottom-xs">{{info}}</view>
+                    <view wx:for="{{workorder.infos}}" wx:key="{{index}}" wx:for-item="info" class="content margin-bottom-xs">{{info}}</view>
                 </view>
                 <view class="grid flex-sub padding col-3 grid-square">
-                    <view class="bg-img" style="background-image:url({{img}});" wx:for="{{item.imgs}}" wx:for-item="img" wx:key="{{index}}">
+                    <view class="bg-img" style="background-image:url({{img}});" wx:for="{{imgs}}" wx:for-item="img" wx:key="{{index}}">
                     </view>
                 </view>
             </view>
@@ -49,7 +49,7 @@
             <text class='cuIcon-titles text-orange '></text> 维修记录
         </view>
     </view>
-    <view wx:for="{records}" wx:key="{{index}}" class="cu-card dynamic no-card}}">
+    <view wx:for="{{records}}" wx:key="{{index}}" class="cu-card dynamic no-card}}">
         <view class="cu-item shadow">
             <view class="cu-list menu-avatar">
                 <view class="cu-item">
