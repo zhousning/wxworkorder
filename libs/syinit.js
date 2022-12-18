@@ -100,7 +100,8 @@ var init = {
                 }
                 that.setData({
                     workorder: workorder,
-                    imgs: imgs
+                    imgs: imgs,
+                    infoImgList: imgs,
                 })
             }
         })
@@ -141,8 +142,17 @@ var init = {
                 taskid: taskid
             },
             success: function (res) {
+                var records = res.data;
+                var imgs = [];
+                for (var i=0; i < records.length; i++){
+                    var wimgs = records[i].imgs;
+                    for (var j=0; j<wimgs.length; j++ ){
+                        imgs.push(wimgs[j])
+                    }
+                }
                 that.setData({
-                    records: res.data
+                    records: records,
+                    recordImgList: imgs,
                 })
             }
         })

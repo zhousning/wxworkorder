@@ -9,7 +9,6 @@ Component({
         StatusBar: app.globalData.StatusBar,
         CustomBar: app.globalData.CustomBar,
         workorders: [],
-        task_finish: null,
     },
     lifetimes: {
         attached: function () {
@@ -42,9 +41,7 @@ Component({
                             },
                             success: function (res) {
                                 if (res.data.state == 'success') {
-                                  that.setData({
-                                      task_finish: true
-                                  })
+                                    syinit.task_query_pend(that);
                                 }
                             }
                         })

@@ -16,10 +16,6 @@
                     </view>
                 </view>
             </navigator>
-            <view class="flex solid-top margin-top padding-xs justify-end">
-                <view class="cu-btn line-blue padding-sm margin-xs ">接单</view>
-                <view class="cu-btn line-blue padding-sm margin-xs ">转单</view>
-            </view>
         </view>
     </view>
 

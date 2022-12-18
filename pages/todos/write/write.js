@@ -20,14 +20,14 @@ Page({
         index: 0,
         picker: [],
         running: [{
-                text: '已解决',
-                value: '0',
-                checked: 'true'
-            },
-            {
-                text: '未解决',
-                value: '1'
-            },
+            text: '已解决',
+            value: '0',
+            checked: 'true'
+        },
+        {
+            text: '未解决',
+            value: '1'
+        },
         ],
         textareaAValue: ''
     },
@@ -173,11 +173,9 @@ Page({
                             title: '保存成功',
                             duration: 3000,
                             success: function () {
-                                setTimeout(() => {                                       
-                                    wx.navigateBack({
-                                      delta: 0,
-                                    })
-                                }, 3000);
+                                wx.navigateBack({
+                                    delta: 0,
+                                })
                             }
                         })
                     } else {

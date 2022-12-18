@@ -1,1 +1,32 @@
-/* pages/todos/detail/detail.wxss */
+.order-opening {
+    background-color: #FF5722 !important;
+    color: white;
+}
+.order-assign {
+    background-color: #2F4056 !important;
+    color: white;
+}
+.order-processing {
+    background-color: #1E9FFF !important;
+    color: white;
+}
+.order-processed {
+    background-color: #009688 !important;
+    color: white;
+}
+.order-transfer {
+    background-color: #45CF82 !important;
+    color: white;
+}
+.order-awaiting {
+    background-color: #F4C500 !important;
+    color: white;
+}
+.order-unsettled {
+    background-color: #FF0000 !important;
+    color: white;
+}
+.order-completed {
+    background-color: #009688 !important;
+    color: white;
+}
