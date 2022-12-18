@@ -27,6 +27,6 @@
     color: white;
 }
 .order-completed {
-    background-color: #009688 !important;
+    background-color: #FF5722 !important;
     color: white;
 }

@@ -61,13 +61,16 @@
                             {{item.time}}
                         </view>
                     </view>
+                    <view class="cu-capsule radius">
+                        <view class="cu-tag {{item.feedback ? 'bg-green' : 'bg-red'}}">{{item.feedback ? '已解决' : '未解决'}}</view>
+                    </view>
                 </view>
             </view>
             <view class="text-content">
                 {{item.content}}
             </view>
             <view class="grid flex-sub padding col-3 grid-square">
-                <view class="bg-img"  data-url="{{img}}" bindtap="ViewRecordImage"  style="background-image:url({{img}});" wx:for="{{item.imgs}}" wx:for-item="img" wx:key="{{index}}">
+                <view class="bg-img" data-url="{{img}}" bindtap="ViewRecordImage" style="background-image:url({{img}});" wx:for="{{item.imgs}}" wx:for-item="img" wx:key="{{index}}">
                 </view>
             </view>
         </view>
