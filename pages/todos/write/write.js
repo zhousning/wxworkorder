@@ -9,7 +9,7 @@ Page({
         site_name: '',
         site_id: null,
         task_id: null,
-        state: '0',
+        state: '1',
         username: '',
         phone: '',
         idno: '',
@@ -21,12 +21,12 @@ Page({
         picker: [],
         running: [{
             text: '已解决',
-            value: '0',
+            value: '1',
             checked: 'true'
         },
         {
             text: '未解决',
-            value: '1'
+            value: '0'
         },
         ],
         textareaAValue: ''

@@ -21,10 +21,37 @@
                     <view class="cu-btn line-blue padding-sm margin-xs ">处理工单</view>
                 </navigator>
                 <view wx:else="{{!item.task_finish}}" class="cu-btn line-blue padding-sm margin-xs " bindtap="accept_task" data-taskid="{{item.id}}">接单</view>
-                <view class="cu-btn line-blue padding-sm margin-xs ">转单</view>
+                <view class="cu-btn line-blue padding-sm margin-xs " bindtap="showModal" data-target="DialogModal1" data-taskid="{{item.id}}">转单</view>
             </view>
         </view>
     </view>
 
+    <view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+        <view class="cu-dialog">
+            <view class="cu-bar bg-white justify-end">
+                <view class="content">选择人员</view>
+                <view class="action" bindtap="hideModal">
+                    <text class="cuIcon-close text-red"></text>
+                </view>
+            </view>
+            <scroll-view scroll-y class="scrollPage" style="height:50vh">
+                <checkbox-group bindchange="checkboxChange" class="block">
+                    <view class="cu-list menu text-left">
+                    <view class="cu-item" wx:for="{{members}}" wx:key="{{item.value}}" wx:for-item="member">
+                        <label class="flex justify-between align-center flex-sub">
+                            <view class="flex-sub">{{member.name}}</view>
+                            <checkbox value="{{member.dept}}" checked="{{item.checked}}" />
+                        </label>
+                    </view>
+                </view>
+                </checkbox-group>
+            </scroll-view>
+            <view class="cu-bar bg-white justify-end">
+                <view class="action">
+                    <button class="cu-btn bg-green margin-left" bindtap="transferMember">确定</button>
+                </view>
+            </view>
+        </view>
+    </view>
     <view class='cu-tabbar-height'></view>
 </scroll-view>

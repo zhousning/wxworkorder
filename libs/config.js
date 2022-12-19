@@ -45,6 +45,8 @@ var configs = {
     task_query_record: 'http://192.168.31.20:3000/wx_tasks/query_record',
     task_query_process: 'http://192.168.31.20:3000/wx_tasks/query_process',
     task_accept: 'http://192.168.31.20:3000/wx_tasks/accept_task',
+    task_member: 'http://192.168.31.20:3000/wx_tasks/task_member',
+    task_transfer:  'http://192.168.31.20:3000/wx_tasks/task_transfer',
     task_processed: 'http://192.168.31.20:3000/wx_tasks/task_processed',
     task_query_unconfirm: 'http://192.168.31.20:3000/wx_tasks/query_unconfirm',
     task_query_finish: 'http://192.168.31.20:3000/wx_tasks/query_finish',
