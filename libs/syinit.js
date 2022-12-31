@@ -93,7 +93,7 @@ var init = {
             },
             success: function (res) {
                 var workorder = res.data;
-                var wimgs = workorder.imgs;
+                var wimgs = workorder.imgs == undefined ? [] : workorder.imgs;
                 var imgs = [];
                 for (var i=0; i < wimgs.length; i++){
                     imgs.push(app.globalData.config.routes.uhost + wimgs[i])
@@ -145,7 +145,7 @@ var init = {
                 var records = res.data;
                 var imgs = [];
                 for (var i=0; i < records.length; i++){
-                    var wimgs = records[i].imgs;
+                    var wimgs = records.imgs == undefined ? [] : records.imgs;
                     for (var j=0; j<wimgs.length; j++ ){
                         imgs.push(wimgs[j])
                     }

@@ -138,61 +138,11 @@ Page({
         })
     },
     AreaPickerChange(e) {
-        let openid = wx.getStorageSync('openId')
         let that = this
         that.setData({
             area_index: e.detail.value
         })
-        wx.request({
-            url: app.globalData.config.routes.streets,
-            method: 'get',
-            header: {
-                'Accept': "*/*",
-                'content-type': 'application/json' // 默认值
-            },
-            data: {
-                id: openid,
-                area: that.data.area_picker[e.detail.value]
-            },
-            success: function (res) {
-                if (res.data) {
-                    that.setData({
-                        items: res.data
-                    })
-                }
-            }
-        })
     },
-    // AreaPickerChange(e) {
-    //     let openid = wx.getStorageSync('openId')
-    //     let that = this
-    //     that.setData({
-    //         area_index: e.detail.value
-    //     })
-    //     wx.request({
-    //         url: app.globalData.config.routes.streets,
-    //         method: 'get',
-    //         header: {
-    //             'Accept': "*/*",
-    //             'content-type': 'application/json' // 默认值
-    //         },
-    //         data: {
-    //             id: openid,
-    //             area: that.data.area_picker[e.detail.value]
-    //         },
-    //         success: function (res) {
-    //             if (res.data) {
-    //                 var array = []
-    //                 res.data.forEach(element => {
-    //                     array.push(element)
-    //                 });
-    //                 that.setData({
-    //                     street_picker: array
-    //                 })
-    //             }
-    //         }
-    //     })
-    // },
     StreetPickerChange(e) {
         let openid = wx.getStorageSync('openId')
         let that = this
@@ -238,13 +188,7 @@ Page({
     login: function () {
         var that = this;
         var openid = wx.getStorageSync('openId')
-        var items = that.data.items
-        var sites = []
-        for(var i=0; i< items.length; i++) {
-            if (items[i].checked) {
-                sites.push(items[i].value)
-            }
-        }
+
         if (that.data.username.length == 0 || that.data.phone.length == 0) {
             wx.showToast({
                 title: '姓名或电话不能为空',
@@ -262,8 +206,7 @@ Page({
                     id: openid,
                     name: that.data.username,
                     phone: that.data.phone,
-                    sites: sites,
-                    fct: that.data.fct_picker[that.data.fct_index] 
+                    fct: that.data.area_picker[that.data.area_index]
                 },
                 header: {
                     'Accept': "*/*",
