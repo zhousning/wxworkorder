@@ -1,0 +1,13 @@
+<cu-custom bgColor="bg-myblue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">订阅消息</view>
+</cu-custom>
+
+<view class="container">
+  <view class="userinfo">
+      <button bindtap="openSetting" class="bg-myblue" >授权业务办理进度接收并提醒</button>
+  </view>
+  <view class="margin-top-lg">
+    <image src="/images/noticezs.jpg" mode="widthFix"></image>
+  </view>
+</view>
